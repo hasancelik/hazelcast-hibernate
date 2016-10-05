@@ -41,7 +41,7 @@ public abstract class HibernateTestSupport extends HazelcastTestSupport {
 
     @BeforeClass
     @AfterClass
-    public static void tearUpAndDown() {
+    public final static void tearUpAndDown() {
         Hazelcast.shutdownAll();
     }
 
