@@ -30,6 +30,7 @@ import org.hibernate.cache.spi.access.AccessType;
 import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 
 import java.net.URL;
@@ -39,19 +40,18 @@ public abstract class HibernateTestSupport extends HazelcastTestSupport{
 
     private final ILogger logger = Logger.getLogger(getClass());
 
-    @BeforeClass
-    @AfterClass
-    public final static void tearUpAndDown() {
+    @Before
+    @After
+    public void tearUpAndDown() {
         Hazelcast.shutdownAll();
     }
 
+    //    @After
+//    public final void cleanup() {
+//        Hazelcast.shutdownAll();
+//    }
     protected String getCacheStrategy() {
         return  AccessType.READ_WRITE.getExternalName();
-    }
-
-    @After
-    public final void cleanup() {
-        Hazelcast.shutdownAll();
     }
 
     protected void sleep(int seconds) {

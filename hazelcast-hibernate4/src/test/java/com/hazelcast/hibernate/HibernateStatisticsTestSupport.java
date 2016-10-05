@@ -55,7 +55,6 @@ public abstract class HibernateStatisticsTestSupport extends HibernateTestSuppor
 
     @Before
     public void cleanAndPostConstruct() {
-        factory.terminateAll();
         HazelcastMockInstanceLoader loader = new HazelcastMockInstanceLoader();
         factory = new TestHazelcastFactory();
         loader.setInstanceFactory(factory);
