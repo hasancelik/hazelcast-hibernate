@@ -551,32 +551,6 @@
             <properties>
                 <hazelcast.version>3.12-SNAPSHOT</hazelcast.version>
             </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>com.hazelcast</groupId>
-                    <artifactId>hazelcast</artifactId>
-                    <version>${hazelcast.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>com.hazelcast</groupId>
-                    <artifactId>hazelcast-client</artifactId>
-                    <version>${hazelcast.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>com.hazelcast</groupId>
-                    <artifactId>hazelcast</artifactId>
-                    <version>${hazelcast.version}</version>
-                    <scope>test</scope>
-                    <classifier>tests</classifier>
-                </dependency>
-                <dependency>
-                    <groupId>com.hazelcast</groupId>
-                    <artifactId>hazelcast-client</artifactId>
-                    <version>${hazelcast.version}</version>
-                    <scope>test</scope>
-                    <classifier>tests</classifier>
-                </dependency>
-            </dependencies>
             <build>
                 <plugins>
                     <plugin>
@@ -586,7 +560,6 @@
                         <configuration combine.self="override">
                             <redirectTestOutputToFile>true</redirectTestOutputToFile>
                             <runOrder>failedfirst</runOrder>
-                            <useSystemClassLoader>false</useSystemClassLoader>
                             <argLine>
                                 -Xms128m -Xmx1G -XX:MaxPermSize=128M
                                 -Dhazelcast.phone.home.enabled=false
