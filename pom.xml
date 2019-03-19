@@ -555,6 +555,17 @@
                 <dependency>
                     <groupId>com.hazelcast</groupId>
                     <artifactId>hazelcast</artifactId>
+                    <version>${hazelcast.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.hazelcast</groupId>
+                    <artifactId>hazelcast-client</artifactId>
+                    <version>${hazelcast.version}</version>
+                    <optional>true</optional>
+                </dependency>
+                <dependency>
+                    <groupId>com.hazelcast</groupId>
+                    <artifactId>hazelcast</artifactId>
                     <scope>test</scope>
                     <version>${hazelcast.version}</version>
                     <classifier>tests</classifier>
