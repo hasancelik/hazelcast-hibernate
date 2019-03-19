@@ -586,6 +586,7 @@
                         <configuration combine.self="override">
                             <redirectTestOutputToFile>true</redirectTestOutputToFile>
                             <runOrder>failedfirst</runOrder>
+                            <useSystemClassLoader>false</useSystemClassLoader>
                             <argLine>
                                 -Xms128m -Xmx1G -XX:MaxPermSize=128M
                                 -Dhazelcast.phone.home.enabled=false
